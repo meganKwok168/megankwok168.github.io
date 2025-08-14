@@ -1,0 +1,159 @@
+body{
+    background-color: #0e1a2b; /* dark navy */
+    color: #c5a46d; /* gold */
+}
+
+nav{
+    color: #c5a46d; /* gold */
+    border-bottom: 1px solid #c5a46d;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navPages {
+    display: flex;
+    gap: 50px; /* space between links */
+    justify-content: space-between;
+}
+
+
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #c5a46d; /* gold */
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #c5a46d; /* gold underline */
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 50%; /* stays centered */
+}
+
+.navPages{
+    display: flex;
+    gap: 50px;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+.socials a{
+    color: inherit;
+}
+.socials a:visited{
+    color: inherit;
+}
+
+
+h1{
+    font-size: 50px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    font-size: 18px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+}
+
+.sectionsContainer{
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    align-items: top;
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding: 2vw;
+}
+
+.sectionPart{
+    background-color: #1d232e;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    width: 25vw;
+    min-height: 40px;
+    text-decoration: none;
+    color:#c5a46d;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionPart:hover{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+    transform: translateY(-6px);
+    transition: transform 0.3s ease;
+}
+
+.sectionName{
+    color: #c5a46d;
+    text-decoration: none;
+    font-size: 35px;    
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    padding-top: 15px;
+}
+
+.sectionDescript{
+    width: auto;         
+    max-width: 80%;   
+    margin: 0 auto;    
+    text-align: left; 
+    word-wrap: break-word;  
+    padding: 15px;
+    line-height: 30px;
+}
+
+.sectionsContainer a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sectionsContainer a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer{
+    border-top: 0.1px solid gray;
+    color: gray;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Projects */
+.gitHub{
+    color: inherit;
+    text-decoration: none;
+}
+
+.gitHub:hover{
+    text-decoration: underline;
+}
+
+.gitHub:visited{
+    color:inherited;
+    text-decoration: none;
+}
