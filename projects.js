@@ -37,18 +37,53 @@ function makeSections(){
     let sections = [
         {
             "name": "EZ Coder",
-            "link": "research.html",
-            "descript": "(programming language usage, CS education, CS industry)",
+            "link": "https://megankwok168.github.io/MK-MyEmollient/ezCoder/ezCoder.html",
+            "repository": "https://github.com/meganKwok168/MK-MyEmollient/tree/main/ezCoder",
+            "descript": "Actively updated developer tool that was originally built for non-developers to easily edit the coded parts of the My Emollient website",
+            "languages": ["JavaScript"],
+            "authors": [
+                {
+                    "name": "Megan Kwok",
+                    "link": "https://github.com/meganKwok168"
+                }
+            ], 
+            "date": "14 August 2025"
         },
         {
-            "name": "CS Projects",
-            "link": "projects.html",
-            "descript": "(web development, developer tools, complex game design)"
+            "name": "Website Elements (My Emollient)",
+            "link": "https://megankwok168.github.io/MK-MyEmollient/elements.html",
+            "repository": "https://github.com/meganKwok168/MK-MyEmollient",
+            "descript": "Designed and developed elements of a website to improve user experience and encourage website interaction", 
+            "languages": ["JavaScript"],
+            "authors": [
+                {
+                    "name": "Megan Kwok",
+                    "link": "https://github.com/meganKwok168"
+                }
+            ],
+            "date": "14 August 2025"
         },
         {
-            "name": "Creative",
-            "link": "creative.html",
-            "descript": "(photography, poetry, singing, competitive piano)"
+            "name": "Angry Birds Clone",
+            "link": "",
+            "repository": "https://github.com/meganKwok168/AngryBirds-by-CHEW",
+            "descript": "Library used: Fisica <br> Junior Year final CS project -- implemented self taught library w/o teacher or peer assistance.  Developed functioning clone of Angry Birds game.",
+            "languages": ["Processing"],
+            "authors": [
+                {
+                    "name": "Megan Kwok", 
+                    "link": "https://github.com/meganKwok168"
+                },
+                {
+                    "name": "Leo Schneiderman",
+                    "link": "https://github.com/LeoSchneiderman"
+                },
+                {
+                    "name": "William Li",
+                    "link": "https://github.com/WillFunance"
+                }
+            ],
+            "date": "14 August 2025"
         }
     ]
 
@@ -57,7 +92,22 @@ function makeSections(){
     for (let section of sections){
         st += `
         <a href="${section.link}"> <div class="sectionPart"><div class="sectionName">${section.name}</div>
-            <div class="sectionDescript">${section.descript}</div>
+        <a href=${section.repository} class="repository" style="text-align: center;">Github Repository</a>
+            <div class="sectionDescript">${section.descript}</div> <div class="sectionDescript" style="padding-top: 1px;">Languages used: `;
+        for (let l = 0; l < section.languages.length; l++){
+            st += `${section.languages[l]}`;
+            if (l != section.languages.length - 1){
+                st += `, `;
+            }
+        }
+        st+= `</div> <div class="sectionDescript" style="padding-top: 1px;">Authors: `
+        for (let a = 0; a < section.authors.length; a++){
+            st += `<a href=${section.authors[a].link} class="repository" style="padding-top: 1px;">${section.authors[a].name}</a>`;
+            if (a != section.authors.length - 1){
+                st += `, `;
+            }
+        } 
+        st+=`</div><p style="color: gray; text-align: center;">Last edited ${section.date}.</p>
         </div></a>`;
     }
 

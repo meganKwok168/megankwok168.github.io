@@ -135,6 +135,17 @@ h2{
     color: inherit;
 }
 
+@media (max-width: 768px) {
+    .sectionsContainer {
+        flex-direction: column;
+        align-items: center;  
+    }
+    
+    .sectionPart {
+        width: 80vw;
+    }
+}
+
 .footer{
     border-top: 0.1px solid gray;
     color: gray;
@@ -156,4 +167,14 @@ h2{
 .gitHub:visited{
     color:inherited;
     text-decoration: none;
+}
+
+.repository{
+    color: inherit;
+    text-decoration: underline !important;
+}
+
+.repository:visited{
+    color: inherit;
+    text-decoration: underline !important;
 }
